@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        font-family: arial;
+        height: 3000px;
+         }
+         .section{
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+         }
+         
+         .sticky-nav{
+            
+            position: sticky;
+            top: 0;
+            padding: 15px;
+            background: #2c6cb3;
+            color: white;
+            z-index: 1000;
+}
+/* fixed navbar */
+
+.fixed-nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    background: #c0392b;
+    color: white;
+}
+
+.hero{
+    position: relative;
+    height: 300px;
+    background: #ddd;
+    margin-top: 80px;
+}
+
+.absolute-nav{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 15px;
+    background: #16a085;
+    color: white;
+}
+
+.responsive-nav{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #1e3a5f;
+    color: white;
+
+}
+
+.nav-links{
+
+    display: flex;
+    gap: 25px;
+    list-style: none;
+
+}
+.nav-links a{
+
+    color: white;
+    text-decoration: none;
+
+} 
+.section h{
+    margin: 0;
+    text-align: center;
+    color: burlywood;
+
+}
+.section p{
+    margin: 5px;
+    text-align: center;
+    padding: 15px;
+    color: yellowgreen;
+
+}
+
+@media(max-width:768px){
+
+    .responsive-nav{
+        flex-direction: column;
+        gap: 15px;
+
+    }
+    .nav-links{
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+
+
+
+
+</style>
+<body>
+
+    <!-- static navbar -->
+
+<div class="static-nav">
+    static navbar (normal)
+</div>
+
+<div class="section">
+<h2>scroll down  sticky navbar Demo</h2>
+</div>
+
+<!-- sticky Navbar -->
+
+<div class="sticky-nav">
+    sticky navbar (stick after scroll)
+</div>
+
+<div class="section">
+    <h2>sticky navbar section</h2>
+    <p>scroll more....</p>
+</div>
+
+<!-- fixed navbar-->
+
+        <div class="fixed-nav">
+            fixed navbar (Always top)
+
+        </div>
+        
+    <div style="padding-top: 80px" class="section">
+        <h2>fixed navbar Demo</h2>
+    </div>
+
+    <!-- ABSOLUTE NAVBAR -->
+
+<div class="hero">
+    <div class="absolute-nav">
+        absolute navbar (inside section)
+    </div>
+</div>
+
+<!-- responsive navbar=-->
+ <div class="responsive-nav">
+    <div>logo</div>
+    <ul class="nav-links">
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+    </ul>
+
+ </div>
+ 
+ <div class="section">
+    <h2>responsive navbar Demo</h2>
+    <p>resize screen to see mobile effect</p>
+ </div>
+
+</body>
+</html>
